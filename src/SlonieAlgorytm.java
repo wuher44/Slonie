@@ -9,24 +9,25 @@ public class SlonieAlgorytm {
 
     public static void main(String[] args) throws Exception {
 
-        File file = new File(args[0]);
+        Scanner scanner = new Scanner(System.in);
+        File file = new File(scanner.nextLine());
 
-        Scanner scanner = new Scanner(file);
+        Scanner fileScanner = new Scanner(file);
 
-        int n = scanner.nextInt();
+        int n = fileScanner.nextInt();
         int[] wagi = new int[n];
         for (int i = 0; i < n; i++) {
-            wagi[i] = scanner.nextInt();
+            wagi[i] = fileScanner.nextInt();
         }
 
         int[] uklad = new int[n];
         for (int i = 0; i < n; i++) {
-            uklad[i] = scanner.nextInt();
+            uklad[i] = fileScanner.nextInt();
         }
 
         int[] cel = new int[n];
         for (int i = 0; i < n; i++) {
-            cel[i] = scanner.nextInt();
+            cel[i] = fileScanner.nextInt();
         }
         System.out.println(algorytm(n, wagi, uklad, cel));
 
