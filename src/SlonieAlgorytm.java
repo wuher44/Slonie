@@ -1,4 +1,3 @@
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -7,27 +6,24 @@ import java.util.Scanner;
 public class SlonieAlgorytm {
 
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        File file = new File(scanner.nextLine());
 
-        Scanner fileScanner = new Scanner(file);
-
-        int n = fileScanner.nextInt();
+        int n = scanner.nextInt();
         int[] wagi = new int[n];
         for (int i = 0; i < n; i++) {
-            wagi[i] = fileScanner.nextInt();
+            wagi[i] = scanner.nextInt();
         }
 
         int[] uklad = new int[n];
         for (int i = 0; i < n; i++) {
-            uklad[i] = fileScanner.nextInt();
+            uklad[i] = scanner.nextInt();
         }
 
         int[] cel = new int[n];
         for (int i = 0; i < n; i++) {
-            cel[i] = fileScanner.nextInt();
+            cel[i] = scanner.nextInt();
         }
         System.out.println(algorytm(n, wagi, uklad, cel));
 
